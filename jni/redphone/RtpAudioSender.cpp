@@ -33,7 +33,7 @@ int RtpAudioSender::send(int timestamp, char* encodedData, int encodedDataLen) {
   char* serializedPacket    = packet.getSerializedPacket();
   int   serializedPacketLen = packet.getSerializedPacketLen();
 
-  if (sendto(socketFd, serializedPacket, serializedPacketLen, 0, sockAddr, sockAddrLen) == -1)
+  if (::send(socketFd, serializedPacket, serializedPacketLen, 0) == -1)
   {
     __android_log_print(ANDROID_LOG_WARN, TAG, "sendto() failed!");
     return -1;

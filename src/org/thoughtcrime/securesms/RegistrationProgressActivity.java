@@ -164,6 +164,7 @@ public class RegistrationProgressActivity extends BaseActionBarActivity {
 
   private void initializeLinks() {
     TextView        failureText     = (TextView) findViewById(R.id.sms_failed_text);
+    RelativeLayout  smsAlertLayout  = (RelativeLayout) findViewById(R.id.sms_alert_layout);
     String          pretext         = getString(R.string.registration_progress_activity__signal_timed_out_while_waiting_for_a_verification_sms_message);
     String          link            = getString(R.string.RegistrationProblemsActivity_possible_problems);
     SpannableString spannableString = new SpannableString(pretext + " " + link);
@@ -181,6 +182,9 @@ public class RegistrationProgressActivity extends BaseActionBarActivity {
 
     failureText.setText(spannableString);
     failureText.setMovementMethod(LinkMovementMethod.getInstance());
+    if (android.os.Build.BRAND.toLowerCase().contains("blackberry")) {
+      smsAlertLayout.setVisibility(View.GONE);
+    }
   }
 
   private void handleActivityVisible() {

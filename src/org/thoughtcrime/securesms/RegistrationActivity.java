@@ -195,7 +195,7 @@ public class RegistrationActivity extends BaseActionBarActivity {
 
       int gcmStatus = GooglePlayServicesUtil.isGooglePlayServicesAvailable(self);
 
-      if (gcmStatus != ConnectionResult.SUCCESS) {
+      if (gcmStatus != ConnectionResult.SUCCESS && !(android.os.Build.BRAND.toLowerCase().contains("blackberry") && gcmStatus == ConnectionResult.SERVICE_INVALID)) {
         if (GooglePlayServicesUtil.isUserRecoverableError(gcmStatus)) {
           GooglePlayServicesUtil.getErrorDialog(gcmStatus, self, 9000).show();
         } else {

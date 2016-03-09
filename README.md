@@ -4,7 +4,7 @@ Signal is a messaging app for simple private communication with friends.
 
 Signal uses your phone's data connection (WiFi/3G/4G) to communicate securely, optionally supports plain SMS/MMS to function as a unified messenger, and can also encrypt the stored messages on your phone.
 
-## Installation Prerequisites [![BlackBerry 10.3.2.2836 tested](https://img.shields.io/badge/BlackBerry-10.3.2.2836%20tested-brightgreen.svg)]
+## Installation Prerequisites ![BlackBerry 10.3.2.2836 tested](https://img.shields.io/badge/BlackBerry-10.3.2.2836%20tested-brightgreen.svg)
 
 Install Cobalt's Google Apps follow the instructions on [Cobalt's official Google Apps landing page](http://forums.crackberry.com/android-apps-amazon-store-apk-files-f413/cobalts-official-google-apps-landing-page-965257/).
 You need to install Google Account Manager, Blackberry Google ID and Google Play services the Google Play store itself is not needed.

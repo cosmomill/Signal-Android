@@ -955,7 +955,7 @@
     <string name="preferences__enable_enter_key_title">Enable Enter key</string>
     <string name="preferences__replace_smiley_with_enter_key">Replace the smiley key with an Enter key</string>
     <string name="preferences__pref_force_websocket_title">Force WebSocket</string>
-    <string name="preferences__always_use_websocket_instead_of_gcm">Always use WebSocket instead of GCM (restart required)</string>
+    <string name="preferences__always_use_websocket_instead_of_gcm">Always use WebSocket instead of GCM. Requires microG Services Core to be Installed (restart required)</string>
     <string name="preferences__pref_enter_sends_title">Enter key sends</string>
     <string name="preferences__pressing_the_enter_key_will_send_text_messages">Pressing the Enter key will send text messages</string>
     <string name="preferences__display_settings">Display settings</string>

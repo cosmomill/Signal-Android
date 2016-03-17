@@ -57,6 +57,7 @@ public class TextSecurePreferences {
   public  static final String PASSPHRASE_TIMEOUT_INTERVAL_PREF = "pref_timeout_interval";
   private static final String PASSPHRASE_TIMEOUT_PREF          = "pref_timeout_passphrase";
   public  static final String SCREEN_SECURITY_PREF             = "pref_screen_security";
+  private static final String FORCE_WEBSOCKET_PREF             = "pref_force_websocket";
   private static final String ENTER_SENDS_PREF                 = "pref_enter_sends";
   private static final String ENTER_PRESENT_PREF               = "pref_enter_key";
   private static final String SMS_DELIVERY_REPORT_PREF         = "pref_delivery_report_sms";
@@ -66,6 +67,7 @@ public class TextSecurePreferences {
   private static final String LOCAL_NUMBER_PREF                = "pref_local_number";
   private static final String VERIFYING_STATE_PREF             = "pref_verifying";
   public  static final String REGISTERED_GCM_PREF              = "pref_gcm_registered";
+  public  static final String REGISTERED_PUSH_PREF             = "pref_push_registered";
   private static final String GCM_PASSWORD_PREF                = "pref_gcm_password";
   private static final String PROMPTED_PUSH_REGISTRATION_PREF  = "pref_prompted_push_registration";
   private static final String PROMPTED_DEFAULT_SMS_PREF        = "pref_prompted_default_sms";
@@ -237,6 +239,10 @@ public class TextSecurePreferences {
     return getStringPreference(context, SIGNALING_KEY_PREF, null);
   }
 
+  public static boolean isForceWebsocketEnabled(Context context) {
+    return getBooleanPreference(context, FORCE_WEBSOCKET_PREF, false);
+  }
+
   public static boolean isEnterImeKeyEnabled(Context context) {
     return getBooleanPreference(context, ENTER_PRESENT_PREF, false);
   }
@@ -392,11 +398,20 @@ public class TextSecurePreferences {
   }
 
   public static boolean isPushRegistered(Context context) {
-    return getBooleanPreference(context, REGISTERED_GCM_PREF, false);
+    return getBooleanPreference(context, REGISTERED_PUSH_PREF, false);
   }
 
   public static void setPushRegistered(Context context, boolean registered) {
     Log.w("TextSecurePreferences", "Setting push registered: " + registered);
+    setBooleanPreference(context, REGISTERED_PUSH_PREF, registered);
+  }
+  
+  public static boolean isGcmRegistered(Context context) {
+    return getBooleanPreference(context, REGISTERED_GCM_PREF, false);
+  }
+  
+  public static void setGcmRegistered(Context context, boolean registered) {
+    Log.w("TextSecurePreferences", "Setting gcm registered: " + registered);
     setBooleanPreference(context, REGISTERED_GCM_PREF, registered);
   }
 

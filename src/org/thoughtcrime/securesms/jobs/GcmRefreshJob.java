@@ -66,7 +66,7 @@ public class GcmRefreshJob extends ContextJob implements InjectableType {
       Log.w(TAG, "GCM registrationId expired, reregistering...");
       int result = GooglePlayServicesUtil.isGooglePlayServicesAvailable(context);
 
-      if (result != ConnectionResult.SUCCESS && !(android.os.Build.BRAND.toLowerCase().contains("blackberry") && result == ConnectionResult.SERVICE_INVALID)) {
+      if ((result != ConnectionResult.SUCCESS && !(android.os.Build.BRAND.toLowerCase().contains("blackberry") && result == ConnectionResult.SERVICE_INVALID)) || TextSecurePreferences.isForceWebsocketEnabled(context)) {
         notifyGcmFailure();
       } else {
         String gcmId = GoogleCloudMessaging.getInstance(context).register(REGISTRATION_ID);
@@ -79,8 +79,9 @@ public class GcmRefreshJob extends ContextJob implements InjectableType {
         }
 
         TextSecurePreferences.setGcmRegistrationId(context, gcmId);
-        TextSecurePreferences.setWebsocketRegistered(context, true);
+        TextSecurePreferences.setGcmRegistered(context, true);
       }
+      TextSecurePreferences.setWebsocketRegistered(context, true);
     }
   }
 

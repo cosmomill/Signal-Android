@@ -6,8 +6,18 @@ Signal uses your phone's data connection (WiFi/3G/4G) to communicate securely, o
 
 ## Installation Prerequisites ![BlackBerry 10.3.2.2836 tested](https://img.shields.io/badge/BlackBerry-10.3.2.2836%20tested-brightgreen.svg)
 
-Install Cobalt's Google Apps follow the instructions on [Cobalt's official Google Apps landing page](http://forums.crackberry.com/android-apps-amazon-store-apk-files-f413/cobalts-official-google-apps-landing-page-965257/).
-You need to install Google Account Manager, Blackberry Google ID and Google Play services the Google Play store itself is not needed.
+To use voice calls in Signal you need to install [microG](https://microg.org/) GmsCore. If you have already installed [Cobalt's Google Apps](http://forums.crackberry.com/android-apps-amazon-store-apk-files-f413/cobalts-official-google-apps-landing-page-965257/), you have to uninstall Google Account Manager, Blackberry Google ID and Google Play services before proceeding to install [microG](https://microg.org/) GmsCore. 
+- Download and install [microG Services Core v0.2.1](https://microg.org/fdroid/repo/com.google.android.gms-8489296.apk).
+- Download and install [BlankStore v0.7.5](https://github.com/mar-v-in/BlankStore/releases/download/v0.7.5/BlankStore.apk).
+- Make sure you have valid login credentials for a Google Account.
+- Generate a Android ID by following [these steps](http://forum.xda-developers.com/showpost.php?p=42983611&postcount=306).
+- Open the _System Settings_, tap _Accounts_ then tap _Add Account_ and choose _Market_ enter your login, password and Android ID. The other fields don't need to be changed. Tap _Create Account_ and you're done.
+- Open the microG Settings app and tick both checkboxes to enable services such as Google Cloud Messaging.
+- Restart your BlackBerry!
+
+## WebSocket Support
+
+This branch adds rudimentary WebSocket-ONLY support to Signal Private Messenger. In order to build a modified version of libtextsecure is needed, for that checkout [this](https://github.com/JavaJens/libtextsecure-java/tree/fix/maven_local) repository.
 
 ## Contributing Bug reports
 

@@ -1,4 +1,4 @@
-# Signal Android for BlackBerry OS 10.3 [![Release](https://img.shields.io/badge/release-v3.13.1%2Bbb10u1-blue.svg)](https://github.com/cosmomill/Signal-Android/releases/latest)
+# Signal Android for BlackBerry OS 10.3 [![Release](https://img.shields.io/badge/release-v3.13.1%2Bbb10u2-blue.svg)](https://github.com/cosmomill/Signal-Android/releases/latest)
 
 Signal is a messaging app for simple private communication with friends.
 

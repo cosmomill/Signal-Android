@@ -464,11 +464,11 @@ public class TextSecurePreferences {
   }
 
   public static boolean isInterceptAllMmsEnabled(Context context) {
-    return getBooleanPreference(context, ALL_MMS_PREF, true);
+    return getBooleanPreference(context, ALL_MMS_PREF, false);
   }
 
   public static boolean isInterceptAllSmsEnabled(Context context) {
-    return getBooleanPreference(context, ALL_SMS_PREF, true);
+    return getBooleanPreference(context, ALL_SMS_PREF, false);
   }
 
   public static boolean isNotificationsEnabled(Context context) {

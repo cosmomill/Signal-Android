@@ -2,13 +2,13 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <org.thoughtcrime.securesms.components.SwitchPreferenceCompat
-                        android:defaultValue="true"
+                        android:defaultValue="false"
                         android:key="pref_all_sms"
                         android:summary="@string/preferences__use_signal_for_viewing_and_storing_all_incoming_text_messages"
                         android:title="@string/preferences__pref_all_sms_title" />
 
     <org.thoughtcrime.securesms.components.SwitchPreferenceCompat
-                        android:defaultValue="true"
+                        android:defaultValue="false"
                         android:key="pref_all_mms"
                         android:summary="@string/preferences__use_signal_for_viewing_and_storing_all_incoming_multimedia_messages"
                         android:title="@string/preferences__pref_all_mms_title" />

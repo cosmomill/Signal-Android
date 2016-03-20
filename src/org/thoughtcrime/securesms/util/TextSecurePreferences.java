@@ -240,7 +240,7 @@ public class TextSecurePreferences {
   }
 
   public static boolean isForceWebsocketEnabled(Context context) {
-    return getBooleanPreference(context, FORCE_WEBSOCKET_PREF, false);
+    return getBooleanPreference(context, FORCE_WEBSOCKET_PREF, true);
   }
 
   public static boolean isEnterImeKeyEnabled(Context context) {

@@ -171,11 +171,7 @@ public class ConversationListFragment extends Fragment
     new AsyncTask<Context, Void, Optional<? extends Reminder>>() {
       @Override protected Optional<? extends Reminder> doInBackground(Context... params) {
         final Context context = params[0];
-        if (ExpiredBuildReminder.isEligible()) {
-          return Optional.of(new ExpiredBuildReminder(context));
-        } else if (OutdatedBuildReminder.isEligible()) {
-          return Optional.of(new OutdatedBuildReminder(context));
-        } else if (DefaultSmsReminder.isEligible(context)) {
+        if (DefaultSmsReminder.isEligible(context)) {
           return Optional.of(new DefaultSmsReminder(context));
         } else if (Util.isDefaultSmsProvider(context) && SystemSmsImportReminder.isEligible(context)) {
           return Optional.of((new SystemSmsImportReminder(context, masterSecret)));

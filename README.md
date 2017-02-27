@@ -7,7 +7,7 @@ Signal uses your phone's data connection (WiFi/3G/4G) to communicate securely, o
 ## Installation Prerequisites ![BlackBerry 10.3.2.2836 tested](https://img.shields.io/badge/BlackBerry-10.3.2.2836%20tested-brightgreen.svg)
 
 To use voice calls in Signal you need to install [microG](https://microg.org/) GmsCore. If you have already installed [Cobalt's Google Apps](http://forums.crackberry.com/android-apps-amazon-store-apk-files-f413/cobalts-official-google-apps-landing-page-965257/), you have to uninstall Google Account Manager, Blackberry Google ID and Google Play services before proceeding to install [microG](https://microg.org/) GmsCore. 
-- Download and install [microG Services Core v0.2.1](https://microg.org/fdroid/repo/com.google.android.gms-8489296.apk).
+- Download and install [microG Services Core v0.2.4](https://github.com/microg/android_packages_apps_GmsCore/releases/download/v0.2.4/GmsCore.apk).
 - Download and install [BlankStore v0.7.5](https://github.com/mar-v-in/BlankStore/releases/download/v0.7.5/BlankStore.apk).
 - Make sure you have valid login credentials for a Google Account.
 - Generate a Android ID by following [these steps](http://forum.xda-developers.com/showpost.php?p=42983611&postcount=306).
